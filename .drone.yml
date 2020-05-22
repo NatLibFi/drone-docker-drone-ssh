@@ -22,6 +22,7 @@ steps:
     GOARCH: amd64
     CGO_ENABLED: 0
   commands:
+    - cd repo
     - go build -a -tags netgo -o release/linux/amd64/drone-git-push
 
 - name: docker
@@ -45,6 +46,6 @@ name: docker_password
 data: bMJMj9BeJvDTdoNJufnZAm+Ri0XlmfQxEfm/w2vr3dmpxhuLjQpLjv3omXnQaIrrcTIifDwqI/gh/RTWe562jeebeTv3K4gsHjgXT50OW4nNcFp7322fulhdvuc=
 ---
 kind: signature
-hmac: 8fd87caf9bcefad476c915a70fe3711349828421ef01aef147aa0b2b8d0f3981
+hmac: caed3363bf4874f6d491b4aa9a597cb6427476486251d0b0fb7c0b9f635f7ca9
 
 ...
