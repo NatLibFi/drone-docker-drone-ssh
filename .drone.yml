@@ -29,7 +29,7 @@ steps:
   image: plugins/docker
   settings:
     context: repo
-    dockerfile: docker/Dockerfile.linux.amd64
+    dockerfile: repo/docker/Dockerfile.linux.amd64
     repo: quay.io/natlibfi/drone-plugin-ssh
     registry: quay.io
     username:
@@ -46,6 +46,6 @@ name: docker_password
 data: bMJMj9BeJvDTdoNJufnZAm+Ri0XlmfQxEfm/w2vr3dmpxhuLjQpLjv3omXnQaIrrcTIifDwqI/gh/RTWe562jeebeTv3K4gsHjgXT50OW4nNcFp7322fulhdvuc=
 ---
 kind: signature
-hmac: caed3363bf4874f6d491b4aa9a597cb6427476486251d0b0fb7c0b9f635f7ca9
+hmac: 480610fdb29aea90780f9d4b52a42f271d32e34de3d756fe1d7c4a2d5e3b4fef
 
 ...
