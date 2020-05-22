@@ -1,3 +1,4 @@
+---
 kind: pipeline
 type: docker
 name: default
@@ -42,3 +43,8 @@ data: 76njAWmqZ8R7u5Otta+Mm4ujGpNUH38txJ3KZxAZz8RTX0RDYdLRmEiCzhZvARCMhcO7uuqju2
 kind: secret
 name: docker_password
 data: bMJMj9BeJvDTdoNJufnZAm+Ri0XlmfQxEfm/w2vr3dmpxhuLjQpLjv3omXnQaIrrcTIifDwqI/gh/RTWe562jeebeTv3K4gsHjgXT50OW4nNcFp7322fulhdvuc=
+---
+kind: signature
+hmac: 8fd87caf9bcefad476c915a70fe3711349828421ef01aef147aa0b2b8d0f3981
+
+...
