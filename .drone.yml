@@ -13,7 +13,7 @@ steps:
 - name: clone-upstream
   image: alpine/git
   commands:
-    - git clone -b master https://github.com/appleboy/drone-git-push repo
+    - git clone -b master https://github.com/appleboy/drone-ssh repo
   
 - name: build
   image: golang:1
@@ -21,9 +21,10 @@ steps:
     GOOS: linux
     GOARCH: amd64
     CGO_ENABLED: 0
+    GO111MODULE: on
   commands:
     - cd repo
-    - go build -a -tags netgo -o release/linux/amd64/drone-git-push
+    - go build -a -tags netgo -o release/linux/amd64/drone-ssh
 
 - name: docker
   image: plugins/docker
@@ -46,6 +47,6 @@ name: docker_password
 data: bMJMj9BeJvDTdoNJufnZAm+Ri0XlmfQxEfm/w2vr3dmpxhuLjQpLjv3omXnQaIrrcTIifDwqI/gh/RTWe562jeebeTv3K4gsHjgXT50OW4nNcFp7322fulhdvuc=
 ---
 kind: signature
-hmac: 480610fdb29aea90780f9d4b52a42f271d32e34de3d756fe1d7c4a2d5e3b4fef
+hmac: ab3e7d23355cb459652f15a1a668def0508fec5e49b4bfc1d7d68cfa91e73398
 
 ...
