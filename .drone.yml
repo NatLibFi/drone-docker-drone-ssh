@@ -1,3 +1,4 @@
+---
 kind: pipeline
 type: docker
 name: default
@@ -21,13 +22,14 @@ steps:
     GOARCH: amd64
     CGO_ENABLED: 0
   commands:
+    - cd repo
     - go build -a -tags netgo -o release/linux/amd64/drone-git-push
 
 - name: docker
   image: plugins/docker
   settings:
     context: repo
-    dockerfile: docker/Dockerfile.linux.amd64
+    dockerfile: repo/docker/Dockerfile.linux.amd64
     repo: quay.io/natlibfi/drone-plugin-ssh
     registry: quay.io
     username:
@@ -42,3 +44,8 @@ data: 76njAWmqZ8R7u5Otta+Mm4ujGpNUH38txJ3KZxAZz8RTX0RDYdLRmEiCzhZvARCMhcO7uuqju2
 kind: secret
 name: docker_password
 data: bMJMj9BeJvDTdoNJufnZAm+Ri0XlmfQxEfm/w2vr3dmpxhuLjQpLjv3omXnQaIrrcTIifDwqI/gh/RTWe562jeebeTv3K4gsHjgXT50OW4nNcFp7322fulhdvuc=
+---
+kind: signature
+hmac: 480610fdb29aea90780f9d4b52a42f271d32e34de3d756fe1d7c4a2d5e3b4fef
+
+...
